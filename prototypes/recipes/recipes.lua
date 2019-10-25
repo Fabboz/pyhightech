@@ -2619,6 +2619,24 @@ RECIPE {
 
 RECIPE {
     type = 'recipe',
+    name = 'laser-module-alt',
+    category = 'advanced-crafting',
+    enabled = false,
+    energy_required = 20,
+    ingredients = {
+        {type = 'item', name = 'lens', amount = 5},
+        {type = 'item', name = 'battery', amount = 5},
+        {type = 'item', name = 'advanced-circuit', amount = 5},
+        {type = 'item', name = 'plastic-bar', amount = 10},
+    },
+    results = {
+        {type = 'item', name = 'laser-module', amount = 1}
+    },
+    main_product = 'laser-module'
+}:add_unlock('nano-tech')
+
+RECIPE {
+    type = 'recipe',
     name = 'yag-laser-module',
     category = 'nmf',
     enabled = false,
@@ -3433,12 +3451,12 @@ RECIPE {
     energy_required = 5,
     ingredients = {
         {type = 'item', name = 'bonemeal', amount = 3},
-        {type = 'item', name = 'collagen', amount = 10},
+        {type = 'item', name = 'collagen', amount = 4},
         {type = 'fluid', name = 'sulfuric-acid', amount = 40},
     },
     results = {
         {type = 'item', name = 'phosphate-rock', amount = 4},
-        {type = 'fluid', name = 'phosphoric-acid', amount = 25},
+        {type = 'fluid', name = 'phosphoric-acid', amount = 10},
     },
     main_product = 'phosphoric-acid',
 }:add_unlock('basic-electronics')
@@ -3464,3 +3482,17 @@ RECIPE {
     subgroup = 'py-combustion',
     order = 'a'
 }:add_unlock('energy-2')
+
+RECIPE {
+    type = 'recipe',
+    name = 'plastic-from-melamine',
+    category = 'crafting',
+    enabled = false,
+    energy_required = 10,
+    ingredients = {
+        {type = 'item', name = 'melamine', amount = 10},
+    },
+    results = {
+        {type = 'item', name = 'plastic-bar', amount = 5}
+    }
+}:add_unlock('basic-electronics')
